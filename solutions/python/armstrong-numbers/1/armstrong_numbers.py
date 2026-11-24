@@ -1,0 +1,11 @@
+def is_armstrong_number(number):
+    # Negative numbers are not Armstrong numbers
+    if number < 0:
+        return False
+        
+    digits = str(number)
+    num_digits = len(digits)
+    
+    total = sum(int(digit) ** num_digits for digit in digits)
+    
+    return total == number
